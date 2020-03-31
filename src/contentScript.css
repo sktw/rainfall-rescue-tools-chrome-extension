@@ -28,3 +28,12 @@
     top: 0;
     bottom: 0;
 }
+
+.classifier .subject-viewer .warning-banner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 100%
+}

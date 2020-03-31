@@ -16,6 +16,8 @@ This Chrome extension modifies the project's classify page to help make transcri
 
 - A vertical 'ruler' to highlight the column being transcribed. Use the horizontal scrollbar on the image viewer to move the column under the highlighter.
 
+- A modified 'Finished' / 'Already seen' warning banner. The banner appears more prominently across the middle of the image.
+
 A major advantage of the scrollbars is that they maintain their positions when the next image is loaded.
 
 ## Usage
