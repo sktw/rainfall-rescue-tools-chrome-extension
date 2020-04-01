@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.1.0...v0.2.0) - 2020-04-01
+
+### Added
+
+- A calculated total of rainfall values entered.
+
 ## [0.1.0](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.0.1...v0.1.0) - 2020-03-31
 
 ### Added

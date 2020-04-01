@@ -18,6 +18,8 @@ This Chrome extension modifies the project's classify page to help make transcri
 
 - A modified 'Finished' / 'Already seen' warning banner. The banner appears more prominently across the middle of the image.
 
+- A calculated total of rainfall values entered. This can be compared to the total on the sheet to check for transcription errors.
+
 A major advantage of the scrollbars is that they maintain their positions when the next image is loaded.
 
 ## Usage
