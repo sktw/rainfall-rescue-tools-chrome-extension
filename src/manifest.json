@@ -1,6 +1,6 @@
 {
     "name": "Rainfall Rescue Tools",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Brighten up Rainfall Rescue with improved layout and tools.",
     "content_scripts": [{
         "matches": ["https://www.zooniverse.org/projects/edh/rainfall-rescue/classify"],

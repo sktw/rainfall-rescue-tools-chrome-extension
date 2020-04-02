@@ -20,11 +20,21 @@ This Chrome extension modifies the project's classify page to help make transcri
 
 - A calculated total of rainfall values entered. This can be compared to the total on the sheet to check for transcription errors.
 
+- Key bindings so that the `Enter` key can be used to move to the next input box, and finally to the 'Done' button.
+
 A major advantage of the scrollbars is that they maintain their positions when the next image is loaded.
 
 ## Usage
 
 Simply install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/rainfall-rescue-tools/ajnjpkijppomillonhioeelpjogaaalf). Navigate to the Rainfall Rescue classify page (or reload it) and the extension will be activated automatically. 
+
+### Calculated Rainfall Total
+
+The total appears at the end of the label of the total rainfall box e.g. 'Total for 1910 (calculated: 23.45)'. It updates each time you move to the next input box.
+
+### Key Bindings
+
+The `Enter` key can be used to move from one input box to the next. On the last input box the `Enter` key moves directly to the 'Done' button (unlike the `Tab` key).
 
 ## Information
 
