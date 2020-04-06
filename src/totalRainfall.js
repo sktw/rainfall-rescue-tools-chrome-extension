@@ -1,13 +1,13 @@
 import {startsWith} from './utils';
 
-function parseRainfallValue(string) {
-    const floatValue = parseFloat(string);
+export function parseRainfallValue(string) {
+    const value = Number(string.trim());
 
-    if (isNaN(floatValue)) {
+    if (isNaN(value)) {
         return 0;
     }
     else {
-        return floatValue;
+        return value;
     }
 }
 
