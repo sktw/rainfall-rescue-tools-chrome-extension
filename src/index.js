@@ -9,6 +9,13 @@ function isRainfallTask(questions) {
     return startsWith(text, 'Please enter the rainfall amounts for');
 }
 
+function isSingleRainfallTask(questions) {
+    // check if task has all questions on single page, or whether they are split between
+    // two pages with a 'Next' button between
+    
+    return questions.length === 13; // 12 months plus total
+}
+
 /*
  * Initialize page
 */
@@ -36,8 +43,10 @@ if (MutationObserver) {
             const questions = taskContainer.getElementsByClassName('question');
             if (questions) {
                 if (isRainfallTask(questions)) {
-                    console.log('rainfall task - adding total calculator');
-                    initializeTotalCalculator(mainContainer);
+                    if (isSingleRainfallTask(questions)) {
+                        console.log('single rainfall task - adding total calculator');
+                        initializeTotalCalculator(mainContainer);
+                    }
                 }
                 else {
                     console.log('locations task');
