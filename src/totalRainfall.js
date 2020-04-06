@@ -24,16 +24,37 @@ function getRainfallTotal(taskTextAreas) {
     return total;
 }
 
-function getRainfallTotalLabel(label, total) {
-    const prefix = label.split(' (')[0];
-    return prefix + ' (calculated: ' + total.toFixed(2) + ')';
+function formatRainfallValue(value) {
+    return value.toFixed(2);
 }
 
-function showRainfallTotal(totalLabel, total) {
+function getRainfallTotalLabel(label, total) {
+    const prefix = label.split(' (')[0];
+    return prefix + ' (calculated: ' + formatRainfallValue(total) + ')';
+}
+
+function rainfallTotalsAgree(sheetTotal, total) {
+    return formatRainfallValue(total) === formatRainfallValue(sheetTotal);
+}
+
+function validateRainfallTotal(textArea, total) {
+    const sheetTotal = parseRainfallValue(textArea.value);
+    const label = textArea.parentElement;
+
+    if (rainfallTotalsAgree(sheetTotal, total)) {
+        label.classList.remove('rrt-total-rainfall-warning');
+    }
+    else {
+        label.classList.add('rrt-total-rainfall-warning');
+    }
+}
+
+function showRainfallTotal(totalLabel, total, totalTextArea) {
     const text = totalLabel.textContent;
 
     if (startsWith(text, 'Total for')) { // double check that this is a rainfall task
         totalLabel.textContent = getRainfallTotalLabel(text, total);
+        validateRainfallTotal(totalTextArea, total);
     }
 }
 
@@ -46,11 +67,12 @@ export function initializeTotalCalculator(mainContainer) {
 
     mainContainer.addEventListener('change', function() {
         const taskTextAreas = mainContainer.querySelectorAll('.task-container textarea.standard-input');
+        const totalTextArea = taskTextAreas[taskTextAreas.length - 1];
         const total = getRainfallTotal(taskTextAreas);
 
         const taskLabels =  mainContainer.querySelectorAll('.task-container .question strong');
         const totalLabel = taskLabels[taskLabels.length - 1];
 
-        showRainfallTotal(totalLabel, total);
+        showRainfallTotal(totalLabel, total, totalTextArea);
     });
 }

@@ -43,3 +43,21 @@
     right: 0;
     width: 100%
 }
+
+.rrt-value-warning > textarea {
+    background-color: #ffbb07;
+}
+
+.rrt-value-warning::after {
+    color: #ffbb07;
+    content: 'Value does not match expected pattern'
+}
+
+.rrt-total-rainfall-warning > textarea {
+    background-color: #ffbb07;
+}
+
+.rrt-total-rainfall-warning::after {
+    color: #ffbb07;
+    content: 'Value does not match calculated total'
+}
