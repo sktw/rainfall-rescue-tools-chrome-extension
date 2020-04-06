@@ -1,5 +1,6 @@
 import {initializeTotalCalculator} from './totalRainfall';
 import {initializeKeyBindings} from './keyBindings';
+import {initializeHighlighter} from './highlighter';
 import {startsWith} from './utils';
 
 function isRainfallTask(questions) {
@@ -43,6 +44,8 @@ if (MutationObserver) {
             const questions = taskContainer.getElementsByClassName('question');
             if (questions) {
                 if (isRainfallTask(questions)) {
+                    initializeHighlighter(mainContainer);
+
                     if (isSingleRainfallTask(questions)) {
                         console.log('single rainfall task - adding total calculator');
                         initializeTotalCalculator(mainContainer);
