@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.3.0...v0.4.0) - 2020-07-02
+
+### Added
+
+- Input validation to check that the values being entered have the expected pattern.
+
+### Changed
+
+- Modified ruler so that it can now be moved across the image.
+
+### Fixed
+
+- Fix issue with `parseRainfallValue` being too permissive.
+- Disable rainfall total feature for split tasks.
+- Fix issue of extension features being active on pages other than the classify page.
+
 ## [0.3.0](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.2.0...v0.3.0) - 2020-04-02
 
 ### Added

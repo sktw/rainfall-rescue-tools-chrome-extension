@@ -14,7 +14,7 @@ This Chrome extension modifies the project's classify page to help make transcri
 
 - Vertical scrollbars on the image viewer and input boxes. This allows the image and the inputs to be aligned as you wish.
 
-- A vertical 'ruler' to highlight the column being transcribed. Use the horizontal scrollbar on the image viewer to move the column under the highlighter.
+- A vertical 'ruler' to highlight the column being transcribed.
 
 - A modified 'Finished' / 'Already seen' warning banner. The banner appears more prominently across the middle of the image.
 
@@ -22,15 +22,25 @@ This Chrome extension modifies the project's classify page to help make transcri
 
 - Key bindings so that the `Enter` key can be used to move to the next input box, and finally to the 'Done' button.
 
+- Input validation to check that the values being entered have the expected pattern.
+
 A major advantage of the scrollbars is that they maintain their positions when the next image is loaded.
 
 ## Usage
 
 Simply install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/rainfall-rescue-tools/ajnjpkijppomillonhioeelpjogaaalf). Navigate to the Rainfall Rescue classify page (or reload it) and the extension will be activated automatically. 
 
+### Ruler
+
+The ruler can be positioned by clicking and dragging it across the image. For example, you could position it next to the input boxes on the right-hand side. Then, the column to be transcribed can be moved under the highlighter using the horizontal scrollbar.
+
+### Input Validation
+
+The rainfall input boxes will display a warning if the value entered does not have the expected pattern. Expected values are either blank or a positive number with 2 decimal places.
+
 ### Calculated Rainfall Total
 
-The total appears at the end of the label of the total rainfall box e.g. 'Total for 1910 (calculated: 23.45)'. It updates each time you move to the next input box.
+The calculated total appears at the end of the label of the total rainfall box e.g. 'Total for 1910 (calculated: 23.45)'. It updates each time you move to the next input box. The total box will display a warning if the sheet total does not match the calculated total. Note though that you should still enter the total as written on the sheet, even if it disagrees with the calculated total.
 
 ### Key Bindings
 
