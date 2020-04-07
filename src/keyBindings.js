@@ -1,7 +1,7 @@
 // https://gist.github.com/IgnoredAmbience/800b38847f881d5592e2148fbc3d4bda
 
 export function initializeKeyBindings(mainContainer) {
-    mainContainer.addEventListener('keydown', function(e) {
+    const handleKeyDown = (e) => {
 
         const active = document.activeElement;
         const textareas = mainContainer.querySelectorAll('textarea');
@@ -32,5 +32,13 @@ export function initializeKeyBindings(mainContainer) {
                 console.error('no element to move to');
             }
         }
-    });
+    };
+
+    mainContainer.addEventListener('keydown', handleKeyDown);
+
+    // return teardown function
+
+    return () => {
+        mainContainer.removeEventListener('keydown', handleKeyDown);
+    }
 }

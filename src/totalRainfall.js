@@ -42,10 +42,10 @@ function validateRainfallTotal(textArea, total) {
     const label = textArea.parentElement;
 
     if (rainfallTotalsAgree(sheetTotal, total)) {
-        label.classList.remove('rrt-total-rainfall-warning');
+        label.classList.remove('total-rainfall-warning');
     }
     else {
-        label.classList.add('rrt-total-rainfall-warning');
+        label.classList.add('total-rainfall-warning');
     }
 }
 
@@ -65,7 +65,7 @@ export function initializeTotalCalculator(mainContainer) {
      * subject so no need to clear the old total
     */
 
-    mainContainer.addEventListener('change', function() {
+    const handleChange = () => {
         const taskTextAreas = mainContainer.querySelectorAll('.task-container textarea.standard-input');
         const totalTextArea = taskTextAreas[taskTextAreas.length - 1];
         const total = getRainfallTotal(taskTextAreas);
@@ -74,5 +74,13 @@ export function initializeTotalCalculator(mainContainer) {
         const totalLabel = taskLabels[taskLabels.length - 1];
 
         showRainfallTotal(totalLabel, total, totalTextArea);
-    });
+    };
+ 
+    mainContainer.addEventListener('change', handleChange);
+
+    // return teardown function
+
+    return () => {
+        mainContainer.removeEventListener('change', handleChange);
+    }
 }

@@ -9,15 +9,15 @@ function validateInput(textArea) {
     const label = textArea.parentElement;
 
     if (isValidRainfallValue(textArea.value)) {
-        label.classList.remove('rrt-value-warning');
+        label.classList.remove('value-warning');
     }
     else {
-        label.classList.add('rrt-value-warning');
+        label.classList.add('value-warning');
     }
 }
 
 export function initializeInputValidation(mainContainer) {
-    mainContainer.addEventListener('change', function(e) {
+    const handleChange = (e) => {
         const taskTextAreas = mainContainer.querySelectorAll('.task-container textarea.standard-input');
         
         for (const ta of taskTextAreas) {
@@ -26,6 +26,11 @@ export function initializeInputValidation(mainContainer) {
                 return;
             }
         }
-    });
-}
+    };
+    
+    mainContainer.addEventListener('change', handleChange);
 
+    return () => {
+        mainContainer.removeEventListener('change', handleChange);
+    }
+}

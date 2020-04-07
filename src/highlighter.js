@@ -44,4 +44,13 @@ export function initializeHighlighter(mainContainer) {
     else {
         console.error('could not find classifier element');
     }
+
+    // return teardown function
+
+    return () => {
+        const highlighter = mainContainer.querySelector('.highlighter');
+        if (highlighter) {
+            highlighter.remove();
+        }
+    };
 }

@@ -1,22 +1,22 @@
-.classifier {
+.rainfall-rescue-tools .classifier {
     position: relative;
     height: 100vh;
 }
 
-.subject-viewer {
+.rainfall-rescue-tools .subject-viewer {
     overflow: scroll;
 }
 
-.classifier .subject-viewer .subject-container {
+.rainfall-rescue-tools .classifier .subject-viewer .subject-container {
     max-width: 300%;
     width: 300%;
 }
 
-.classifier > div:nth-child(2) {
+.rainfall-rescue-tools .classifier > div:nth-child(2) {
     overflow-y: scroll;
 }
 
-.highlighter {
+.rainfall-rescue-tools .highlighter {
     position: absolute;
     content: '';
     background-color: rgba(255, 0, 0, 0.1);
@@ -24,18 +24,18 @@
     cursor: grab;
 }
 
-.highlighter-moving {
+.rainfall-rescue-tools .highlighter-moving {
     cursor: grabbing;
 }
 
-.highlighter-vertical {
+.rainfall-rescue-tools .highlighter-vertical {
     left: 50%;
     width: 100px;
     top: 0;
     bottom: 0;
 }
 
-.classifier .subject-viewer .warning-banner {
+.rainfall-rescue-tools .classifier .subject-viewer .warning-banner {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -44,20 +44,20 @@
     width: 100%
 }
 
-.rrt-value-warning > textarea {
+.rainfall-rescue-tools .value-warning > textarea {
     background-color: #ffbb07;
 }
 
-.rrt-value-warning::after {
+.rainfall-rescue-tools .value-warning::after {
     color: #ffbb07;
     content: 'Value does not match expected pattern'
 }
 
-.rrt-total-rainfall-warning > textarea {
+.rainfall-rescue-tools .total-rainfall-warning > textarea {
     background-color: #ffbb07;
 }
 
-.rrt-total-rainfall-warning::after {
+.rainfall-rescue-tools .total-rainfall-warning::after {
     color: #ffbb07;
     content: 'Value does not match calculated total'
 }
