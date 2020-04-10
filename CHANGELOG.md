@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.1](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.4.0...v0.4.1) - 2020-09-02
+
+### Changed
+
+- Updated for new rainfall tasks that include a year entry box.
+
 ## [0.4.0](https://github.com/sktw/rainfall-rescue-tools-chrome-extension/compare/v0.3.0...v0.4.0) - 2020-07-02
 
 ### Added

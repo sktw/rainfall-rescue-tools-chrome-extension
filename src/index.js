@@ -8,14 +8,14 @@ function isRainfallTask(questions) {
     // check if questions are from a rainfall task
     const text = questions[0].textContent;
 
-    return startsWith(text, 'Please enter the rainfall amounts for');
+    return startsWith(text, 'Which year on this sheet ends in');
 }
 
 function isSingleRainfallTask(questions) {
     // check if task has all questions on single page, or whether they are
     // split between two pages with a 'Next' button between
     
-    return questions.length === 13; // 12 months plus total
+    return questions.length === 14; // year plus 12 months plus total
 }
 
 // add namespacing class to the main container
