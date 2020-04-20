@@ -19,12 +19,8 @@ function validateInput(textArea) {
 export function initializeInputValidation(mainContainer) {
     const handleChange = (e) => {
         const taskTextAreas = mainContainer.querySelectorAll('.task-container textarea.standard-input');
-
-        // first text area is year - don't validate
         
-        for (let i = 1; i < taskTextAreas.length; i++) {
-            const ta = taskTextAreas[i];
-
+        for (const ta of taskTextAreas) {
             if (ta === e.target) {
                 validateInput(ta);
                 return;

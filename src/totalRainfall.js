@@ -14,11 +14,10 @@ export function parseRainfallValue(string) {
 function getRainfallTotal(taskTextAreas) { 
     let total = 0;
 
-    // iterate over all textareas except first and last
-    // first is year entry box
+    // iterate over all textareas except the last
     // the last textarea is the entered total from the sheet
 
-    for (let i = 1; i < taskTextAreas.length - 1; i++) {
+    for (let i = 0; i < taskTextAreas.length - 1; i++) {
         total += parseRainfallValue(taskTextAreas[i].value);
     }
 
@@ -53,7 +52,7 @@ function validateRainfallTotal(textArea, total) {
 function showRainfallTotal(totalLabel, total, totalTextArea) {
     const text = totalLabel.textContent;
 
-    if (startsWith(text, 'Total')) { // double check that this is a rainfall task
+    if (startsWith(text, 'Total for')) { // double check that this is a rainfall task
         totalLabel.textContent = getRainfallTotalLabel(text, total);
         validateRainfallTotal(totalTextArea, total);
     }
