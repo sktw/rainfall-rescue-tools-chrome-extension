@@ -32,13 +32,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new CopyPlugin([
-            {from: 'src/manifest.json', to: '.'},
-            {from: 'src/contentScript.css', to: '.'},
-            {from: 'src/icons', to: './icons'}
-        ], 
-        {
-            copyUnmodified: true
+        new CopyPlugin({
+            patterns: [
+                {from: 'src/manifest.json', to: '.'},
+                {from: 'src/contentScript.css', to: '.'},
+                {from: 'src/icons', to: './icons'}
+            ]
         })
     ]
 }
